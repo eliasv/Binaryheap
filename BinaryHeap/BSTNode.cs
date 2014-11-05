@@ -8,16 +8,30 @@ namespace BinaryHeap
 {
     public class BTNode<T>
     {
-        private T data;
-        private BTNode<T> parent;
-        private BTNode<T> childLeft;
-        private BTNode<T> childRight;
+        private T data { get; set; }
+        private BTNode<T> parent {get; set;}
+        private BTNode<T> childLeft { get; set; }
+        private BTNode<T> childRight { get; set; }
 
-        public void BTNode<T>()
+        public BTNode()
         {
             parent = null;
             childLeft = null;
             childRight = null;
+        }
+
+        public BTNode(T item)
+            : this()
+        {
+            data = item;
+        }
+
+        public BTNode(BTNode<T> N)
+        {
+            data = N.data;
+            parent = N.parent;
+            childLeft = N.childLeft;
+            childRight = N.childRight;
         }
     }
 }
