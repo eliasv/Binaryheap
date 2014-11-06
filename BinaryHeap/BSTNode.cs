@@ -34,4 +34,10 @@ namespace BinaryHeap
             childRight = N.childRight;
         }
     }
+
+    class BinarySearchTree<T>
+    {
+        BSTNode<T> node;
+
+    }
 }
